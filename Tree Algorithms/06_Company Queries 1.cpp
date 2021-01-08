@@ -57,31 +57,6 @@ void build_table(ll src,ll par){
 	}
 }
 
-// void dfs(ll src ,ll parent){
-// 	// parents[src] = parent;
-// 	for(auto nbr:g[src]){
-// 		if(nbr != parent){
-// 			depth[nbr] = depth[src] + 1;
-// 			dfs(nbr,src);
-// 		}
-// 	}
-// }
-
-// void build_table(ll src,ll parent){
-// 	parents[0][src] = parent;
-// 	for(ll p = 1 ; p < m ; p++){
-// 		parents[p][src] = parents[p - 1][parents[p - 1][src]]; 
-// 	}
-
-// 	for(auto nbr:g[src]){
-// 		if(nbr != parent){
-// 			build_table(nbr,src);
-// 		}
-// 	}
-
-// 	return;
-// }
-
 ll find_parent(ll u,ll p){
 	for(ll i = m - 1; i >= 0 ;i--){
 		if( ( p >> i) & 1){
